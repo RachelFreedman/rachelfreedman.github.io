@@ -1,2 +1,4 @@
 name:Rachel Freedman
 markdown:kramdown
+plugins:
+  - jekyll-sitemap
