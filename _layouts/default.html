@@ -32,12 +32,14 @@
 
 		{{ content }}
 
+		{% if page.url != '/' %}
 		<footer class="site-footer">
 			<a href="mailto:rachel.freedman@berkeley.edu">email</a>
 			<a href="https://scholar.google.com/citations?user=Mj1fmhsAAAAJ">google scholar</a>
 			<a href="https://x.com/FreedmanRach">twitter</a>
 			<a href="https://github.com/rachelfreedman">github</a>
 		</footer>
+		{% endif %}
 	</div>
 
 	<script>

@@ -36,8 +36,8 @@ a {
 	transition: color .2s, border-color .2s;
 }
 a:hover { color: var(--accent); border-bottom-color: var(--accent); }
-a.plain, .site-header nav a, .site-footer a { border-bottom: 1px solid transparent; }
-.site-header nav a:hover, .site-footer a:hover { border-bottom-color: currentColor; }
+a.plain, .site-header nav a, .site-footer a, .contact a { border-bottom: 1px solid transparent; }
+.site-header nav a:hover, .site-footer a:hover, .contact a:hover { border-bottom-color: currentColor; }
 
 /* header */
 .site-header {
@@ -97,6 +97,14 @@ h1 {
 	color: var(--muted);
 	font-style: italic;
 }
+
+.contact {
+	display: flex;
+	gap: 22px;
+	flex-wrap: wrap;
+	margin-top: 28px;
+}
+.contact a { font-size: 14px; letter-spacing: .08em; }
 
 .lede {
 	margin-top: 60px;
