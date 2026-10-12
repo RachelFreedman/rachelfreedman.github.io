@@ -1,0 +1,10 @@
+# Display names for publication tags (order = order of the filter chips).
+# A tag used in publications.yml but missing here falls back to its slug.
+alignment: Alignment
+reward-learning: Reward learning
+rlhf: RLHF
+pluralistic-alignment: Pluralistic alignment
+social-choice-theory: Social choice
+interpretability: Interpretability
+cirl: Assistance games
+position: Position paper

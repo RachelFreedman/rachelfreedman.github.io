@@ -2,165 +2,125 @@
 layout: default
 title: Publications
 ---
+{% assign pubs = site.data.publications %}
+{% assign roles = "lead|supervisor|contributor" | split: "|" %}
+{% assign role_names = "Lead author|Supervising author|Contributing author" | split: "|" %}
 <main>
 	<div class="page-head">
 		<h1>Publications</h1>
 		<p>Also on <a href="https://scholar.google.com/citations?user=Mj1fmhsAAAAJ">Google Scholar</a>.</p>
 	</div>
 
-	<div class="pub-list">
-  <article class="pub">
-    <div class="pub-year">2026</div>
-    <div>
-      <h2>Reward Basis Decomposition for Interpreting Preference Heterogeneity</h2>
-      <div class="pub-authors">Mohamed I. Eldagla, Ifesi Onubogu, Prerana Rane, Harsh Sharma, <span class="me">Rachel Freedman</span></div>
-      <div class="pub-venue">InterpScience Workshop (at NeurIPS 2026)</div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2026</div>
-    <div>
-      <h2>Active Teacher Selection for Reward Learning</h2>
-      <div class="pub-authors"><span class="me">Rachel Freedman</span>, Justin Svegliato, Kyle Wray, Stuart Russell</div>
-      <div class="pub-venue">Transactions on Machine Learning Research (TMLR 2026); contributed talks at PRL @ AAAI 2025 and TAIS 2025</div>
-      <div class="pub-links">
-        <a href="https://openreview.net/forum?id=9OEy68av40">Paper</a>
-        <a href="https://arxiv.org/abs/2310.15288">arXiv</a>
-        <a href="https://github.com/RachelFreedman/ATS">Code</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2026</div>
-    <div>
-      <h2>Adaptive Pluralistic Alignment: A Pipeline for Dynamic Artificial Democracy</h2>
-      <div class="pub-authors"><span class="me">Rachel Freedman</span></div>
-      <div class="pub-venue">BiAlign Workshop (at NeurIPS 2026); also presented at the Pluralistic Alignment Workshop (at ICML 2026)</div>
-      <div class="pub-award">Oral (top 15%) at BiAlign 2026</div>
-      <div class="pub-links">
-        <a href="https://arxiv.org/abs/2605.01642">Paper</a>
-        <a href="https://icml.cc/virtual/2026/75640">ICML workshop page</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2025</div>
-    <div>
-      <h2>Open Problems and Fundamental Limitations of Reinforcement Learning from Human Feedback</h2>
-      <div class="pub-authors">Stephen Casper, Xander Davies, Claudia Shi, Thomas Krendl Gilbert, Jérémy Scheurer, Javier Rando, <span class="me">Rachel Freedman</span>, Tomasz Korbak, David Lindner, Pedro Freire, Tony Wang, Samuel Marks, Charbel-Raphaël Segerie, Micah Carroll, Andi Peng, Phillip Christoffersen, Mehul Damani, Stewart Slocum, Usman Anwar, Anand Siththaranjan, Max Nadeau, Eric J. Michaud, Jacob Pfau, Dmitrii Krasheninnikov, Xin Chen, Lauro Langosco, Peter Hase, Erdem Bıyık, Anca Dragan, David Krueger, Dorsa Sadigh, Dylan Hadfield-Menell</div>
-      <div class="pub-venue">International Conference on Learning Representations (ICLR 2025); Transactions on Machine Learning Research (TMLR 2023)</div>
-      <div class="pub-links">
-        <a href="https://openreview.net/forum?id=bx24KpJ4Eb">Paper</a>
-        <a href="https://arxiv.org/abs/2307.15217">arXiv</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2024</div>
-    <div>
-      <h2>Linear Probe Penalties Reduce LLM Sycophancy</h2>
-      <div class="pub-authors">Henry Papadatos, <span class="me">Rachel Freedman</span></div>
-      <div class="pub-venue">Socially Responsible Language Modelling Research Workshop (SoLaR) (at NeurIPS 2024)</div>
-      <div class="pub-links">
-        <a href="https://openreview.net/forum?id=6N2yES22rG">Paper</a>
-        <a href="https://arxiv.org/abs/2412.00967">arXiv</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2024</div>
-    <div>
-      <h2>Position: Social Choice Should Guide AI Alignment in Dealing with Diverse Human Feedback</h2>
-      <div class="pub-authors">Vincent Conitzer, <span class="me">Rachel Freedman</span>, Jobst Heitzig, Wesley H. Holliday, Bob M. Jacobs, Nathan Lambert, Milan Mossé, Eric Pacuit, Stuart Russell, Hailey Schoelkopf, Emanuel Tewolde, William S. Zwicker</div>
-      <div class="pub-venue">International Conference on Machine Learning (ICML 2024)</div>
-      <div class="pub-links">
-        <a href="https://proceedings.mlr.press/v235/conitzer24a.html">Paper</a>
-        <a href="https://arxiv.org/abs/2404.10271">arXiv</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2023</div>
-    <div>
-      <h2>Active Reward Learning from Multiple Teachers</h2>
-      <div class="pub-authors">Peter Barnett, <span class="me">Rachel Freedman</span>, Justin Svegliato, Stuart Russell</div>
-      <div class="pub-venue">SafeAI Workshop (at AAAI 2023)</div>
-      <div class="pub-award">Best Paper Award Finalist at SafeAI 2023</div>
-      <div class="pub-links">
-        <a href="/assets/Barnett2022.pdf">Paper</a>
-        <a href="https://arxiv.org/abs/2303.00894">arXiv</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2022</div>
-    <div>
-      <h2>The Expertise Problem: Learning from Specialized Feedback</h2>
-      <div class="pub-authors">Oliver Daniels-Koch, <span class="me">Rachel Freedman</span></div>
-      <div class="pub-venue">ML Safety Workshop (at NeurIPS 2022)</div>
-      <div class="pub-award">AI Risk Analysis Award at ML Safety 2022</div>
-      <div class="pub-links">
-        <a href="/assets/Daniels-Koch2022.pdf">Paper</a>
-        <a href="https://arxiv.org/abs/2211.06519">arXiv</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2020</div>
-    <div>
-      <h2>Choice Set Misspecification in Reward Inference</h2>
-      <div class="pub-authors"><span class="me">Rachel Freedman</span>, Rohin Shah, Anca Dragan</div>
-      <div class="pub-venue">AISafety Workshop (at IJCAI-PRICAI 2020)</div>
-      <div class="pub-award">Best Paper Award at AISafety 2020</div>
-      <div class="pub-links">
-        <a href="/assets/Freedman20_AIS.pdf">Paper</a>
-        <a href="https://arxiv.org/abs/2101.07691">arXiv</a>
-        <a href="https://youtu.be/1BN-lRYJv8U?t=9013">Talk</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2020</div>
-    <div>
-      <h2>Benefits of Assistance over Reward Learning</h2>
-      <div class="pub-authors">Rohin Shah, Pedro Freire, Neel Alex, <span class="me">Rachel Freedman</span>, Dmitrii Krasheninnikov, Lawrence Chan, Michael Dennis, Pieter Abbeel, Anca Dragan, Stuart Russell</div>
-      <div class="pub-venue">Cooperative AI Workshop (at NeurIPS 2020)</div>
-      <div class="pub-award">Best Paper Award at CoopAI 2020</div>
-      <div class="pub-links">
-        <a href="https://openreview.net/forum?id=DFIoGDZejIB">Paper</a>
-        <a href="/assets/CoopAI2020.pdf">PDF</a>
-        <a href="https://neurips.cc/virtual/2020/16352">Talk</a>
-      </div>
-    </div>
-  </article>
-
-  <article class="pub">
-    <div class="pub-year">2020</div>
-    <div>
-      <h2>Adapting a Kidney Exchange Algorithm to Align with Human Values</h2>
-      <div class="pub-authors"><span class="me">Rachel Freedman</span>, Jana Schaich Borg, Walter Sinnott-Armstrong, John Dickerson, Vincent Conitzer</div>
-      <div class="pub-venue">Artificial Intelligence Journal (AIJ, vol. 283, 2020); AAAI Conference on Artificial Intelligence (AAAI 2018); AI, Ethics and Society (AIES 2018); Participatory ML Workshop (at ICML 2020); Mechanism Design for Social Good (MD4SG 2018)</div>
-      <div class="pub-award">Outstanding Student Paper Honorable Mention at AAAI 2018</div>
-      <div class="pub-links">
-        <a href="https://www.sciencedirect.com/science/article/pii/S0004370220300229">Journal Paper</a>
-        <a href="https://ojs.aaai.org/index.php/AAAI/article/view/11505">Conference Paper</a>
-        <a href="https://arxiv.org/abs/2005.09755">arXiv</a>
-        <a href="https://youtu.be/gJO2p0s4L0k">Talk</a>
-        <a href="/assets/poster.pdf">Poster</a>
-        <a href="https://github.com/RachelFreedman/KidneyExchange">Code</a>
-        <a href="https://qz.com/1383083/how-ai-changed-organ-donation-in-the-us/">Quartz coverage</a>
-        <a href="https://theoutline.com/post/2760/should-ai-decide-who-gets-a-kidney">Outline coverage</a>
-      </div>
-    </div>
-  </article>
+	<div class="filters" id="filters" hidden>
+		<div class="filter-row">
+			<span class="filter-name">Role</span>
+			<div class="chips" data-group="role">
+				<button type="button" class="chip is-on" data-value="">All</button>
+				{% for r in roles %}{% assign i = forloop.index0 %}
+				<button type="button" class="chip chip-role chip-role-{{ r }}" data-value="{{ r }}">{{ role_names[i] }}</button>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="filter-row">
+			<span class="filter-name">Topic</span>
+			<div class="chips" data-group="tag">
+				<button type="button" class="chip is-on" data-value="">All</button>
+				{% for t in site.data.topics %}
+				<button type="button" class="chip" data-value="{{ t[0] }}">{{ t[1] }}</button>
+				{% endfor %}
+			</div>
+		</div>
+		<div class="filter-status"><span id="pub-count">{{ pubs.size }}</span> of {{ pubs.size }} papers &middot; <button type="button" class="linklike" id="pub-reset">reset</button></div>
 	</div>
+
+	<div class="pub-list" id="pub-list">
+	{% for p in pubs %}
+	<article class="pub" data-role="{{ p.role }}" data-tags="{{ p.tags | join: ' ' }}">
+		<div class="pub-side">
+			<div class="pub-year">{{ p.year }}</div>
+			<div class="pub-role pub-role-{{ p.role }}">{% if p.role == "lead" %}Lead author{% elsif p.role == "supervisor" %}Supervising author{% else %}Contributing author{% endif %}</div>
+		</div>
+		<div>
+			<h2>{{ p.title }}</h2>
+			<div class="pub-authors">{% for a in p.authors %}{% if a == "Rachel Freedman" %}<span class="me">{{ a }}</span>{% else %}{{ a }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
+			<div class="pub-venue">{{ p.venue }}{% if p.also_presented %}; also {{ p.also_presented | join: "; " }}{% endif %}</div>
+			{% if p.awards %}<div class="pub-award">{{ p.awards | join: " &middot; " }}</div>{% endif %}
+			<div class="pub-tags">{% for t in p.tags %}<button type="button" class="tag" data-tag="{{ t }}">{{ site.data.topics[t] | default: t }}</button>{% endfor %}</div>
+			{% if p.links and p.links.size > 0 %}
+			<div class="pub-links">{% for l in p.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</div>
+			{% endif %}
+		</div>
+	</article>
+	{% endfor %}
+	</div>
+	<p class="pub-empty" id="pub-empty" hidden>No papers match that combination.</p>
 </main>
+
+<script>
+(function () {
+	var filters = document.getElementById('filters');
+	var list = document.getElementById('pub-list');
+	var pubs = [].slice.call(list.querySelectorAll('.pub'));
+	var count = document.getElementById('pub-count');
+	var empty = document.getElementById('pub-empty');
+	var state = { role: '', tag: '' };
+	filters.hidden = false;
+
+	function readHash() {
+		var q = new URLSearchParams(location.hash.replace(/^#/, ''));
+		state.role = q.get('role') || '';
+		state.tag = q.get('topic') || '';
+	}
+	function writeHash() {
+		var q = new URLSearchParams();
+		if (state.role) q.set('role', state.role);
+		if (state.tag) q.set('topic', state.tag);
+		var h = q.toString();
+		history.replaceState(null, '', h ? '#' + h : location.pathname);
+	}
+	function apply() {
+		var shown = 0;
+		pubs.forEach(function (p) {
+			var okRole = !state.role || p.getAttribute('data-role') === state.role;
+			var tags = (p.getAttribute('data-tags') || '').split(' ');
+			var okTag = !state.tag || tags.indexOf(state.tag) !== -1;
+			var on = okRole && okTag;
+			p.hidden = !on;
+			if (on) shown++;
+		});
+		count.textContent = shown;
+		empty.hidden = shown !== 0;
+		['role', 'tag'].forEach(function (g) {
+			[].slice.call(filters.querySelectorAll('[data-group="' + g + '"] .chip')).forEach(function (c) {
+				c.classList.toggle('is-on', c.getAttribute('data-value') === state[g]);
+			});
+		});
+		[].slice.call(list.querySelectorAll('.tag')).forEach(function (t) {
+			t.classList.toggle('is-on', t.getAttribute('data-tag') === state.tag);
+		});
+		writeHash();
+	}
+
+	filters.addEventListener('click', function (e) {
+		var chip = e.target.closest('.chip');
+		if (!chip) return;
+		var group = chip.parentNode.getAttribute('data-group');
+		state[group] = chip.getAttribute('data-value');
+		apply();
+	});
+	list.addEventListener('click', function (e) {
+		var t = e.target.closest('.tag');
+		if (!t) return;
+		var v = t.getAttribute('data-tag');
+		state.tag = state.tag === v ? '' : v;
+		apply();
+	});
+	document.getElementById('pub-reset').addEventListener('click', function () {
+		state.role = ''; state.tag = ''; apply();
+	});
+	window.addEventListener('hashchange', function () { readHash(); apply(); });
+
+	readHash();
+	apply();
+})();
+</script>
