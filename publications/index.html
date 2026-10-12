@@ -25,9 +25,9 @@ title: Publications
 			<span class="filter-name">Topic</span>
 			<div class="chips" data-group="tag">
 				<button type="button" class="chip is-on" data-value="">All</button>
-				{% for t in site.data.topics %}
+				{% for t in site.data.topics %}{% assign n = 0 %}{% for p in pubs %}{% if p.tags contains t[0] %}{% assign n = n | plus: 1 %}{% endif %}{% endfor %}{% if n >= 2 %}
 				<button type="button" class="chip" data-value="{{ t[0] }}">{{ t[1] }}</button>
-				{% endfor %}
+				{% endif %}{% endfor %}
 			</div>
 		</div>
 		<div class="filter-status"><span id="pub-count">{{ pubs.size }}</span> of {{ pubs.size }} papers &middot; <button type="button" class="linklike" id="pub-reset">reset</button></div>

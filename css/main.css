@@ -214,6 +214,9 @@ section.block p + p { margin-top: 24px; }
 	.pub-year { padding-top: 0; }
 }
 
+/* publications — wider measure */
+body:has(.pub-list) .wrap { max-width: 840px; }
+
 /* publications — filters */
 .filters {
 	margin-top: 40px;
